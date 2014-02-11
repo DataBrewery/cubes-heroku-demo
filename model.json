@@ -139,8 +139,8 @@
             "label": "Webshop / Sales",
             "dimensions": ["date_sale", "customer", "product", "country" ],
             "measures": [
-		        {"name": "quantity", "aggregations": ["sum", "avg", "max"] },
-		        {"name": "price_total", "aggregations": ["sum", "avg", "max", "min"] }
+		        {"name": "quantity", "aggregates": ["sum", "avg", "max"] },
+		        {"name": "price_total", "aggregates": ["sum", "avg", "max", "min"] }
             ],
             
             "joins": [
@@ -188,7 +188,7 @@
             "label": "Website / Visits",
             "dimensions": ["date_visit", "country", "source", "newsletter", "browser" ],
             "measures": [
-		        {"name": "pageviews", "aggregations": ["sum", "avg", "max"] }
+		        {"name": "pageviews", "aggregates": ["sum", "avg", "max"] }
             ],
             
             "joins": [

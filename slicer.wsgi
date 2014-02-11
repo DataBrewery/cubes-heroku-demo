@@ -8,5 +8,5 @@ except KeyError:
     current_dir = os.path.dirname(os.path.abspath(__file__))
     CONFIG_PATH = os.path.join(current_dir, "slicer.ini")
 
-application = create_server(CONFIG_PATH)
+application = create_server(CONFIG_PATH, debug=True)
 

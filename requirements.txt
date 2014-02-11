@@ -1,0 +1,13 @@
+Flask==0.10.1
+Jinja2==2.7.2
+MarkupSafe==0.18
+SQLAlchemy==0.9.2
+Werkzeug==0.9.4
+cubes==1.0alpha
+itsdangerous==0.23
+jsonschema==2.3.0
+psycopg2==2.5.2
+python-dateutil==2.2
+pytz==2013.9
+six==1.5.2
+wsgiref==0.1.2

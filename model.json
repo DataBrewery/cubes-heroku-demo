@@ -6,6 +6,7 @@
         	
             "name": "date_base",
             "label": "Date Base",
+            "role": "time",
             "info": {
                 "cv-datefilter": true,
                 "cv-datefilter-hierarchy": "weekly"

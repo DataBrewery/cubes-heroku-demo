@@ -4,18 +4,13 @@
         {
         	"comment": "This is used as a template for other date dimensions.",
         	
-            "name": "date_base",
-            "label": "Date Base",
+            "name": "date",
+            "label": "Date",
             "role": "time",
-            "info": {
-                "cv-datefilter": true,
-                "cv-datefilter-hierarchy": "weekly"
-            },
             "levels": [
                 {
                     "name":"year",
-                    "label":"Year",
-                    "info": { "cv-datefilter-field": "year" }
+                    "label":"Year"
                 },
                 {
                     "name":"quarter",
@@ -27,34 +22,34 @@
                 },
                 {
                     "name":"week",
-                    "label":"Week",
-                    "info": { "cv-datefilter-field": "week" }
+                    "label":"Week"
                 }
             ],
             "hierarchies": [
                 {
                     "name": "weekly",
                     "label": "Weekly",
-                    "levels": [ "year", "week"]
+                    "levels": [ "week" ]
                 },
                 {
                     "name": "monthly",
                     "label": "Monthly",
                     "levels": [ "year", "quarter", "month"]
                 }
-            ]
+            ],
+            "default_hierarchy_name": "monthly"
         },
         
         {
             "name": "date_sale",
             "label": "Sale Date",
-            "template": "date_base"
+            "template": "date"
         },
         
         {
             "name": "date_visit",
             "label": "View Date",
-            "template": "date_base"
+            "template": "date"
         },        
         
         {
@@ -137,7 +132,7 @@
 
         {
             "name": "sales",
-            "label": "Webshop / Sales",
+            "label": "Webshop Sales",
             "dimensions": ["date_sale", "customer", "product", "country" ],
             "measures": [
 		        {"name": "quantity", "aggregates": ["sum", "avg", "max"] },
@@ -147,46 +142,32 @@
             "joins": [
                   {
                       "master": "sales.date_id",
-                      "detail": "dates.id"
+                      "detail": "date.id",
+                      "alias": "date_sale"
                   },
                   {
                       "master": "sales.customer_id",
-                      "detail": "customers.id"
+                      "detail": "customer.id"
                   },
                   {
                       "master": "sales.product_id",
-                      "detail": "products.id"
+                      "detail": "product.id"
                   },
                   {
                       "master": "sales.country_id",
-                      "detail": "countries.id"
+                      "detail": "country.id"
                   }
             ],            
             
             "mappings": {
-                "date_sale.year": "dates.date_year",
-                "date_sale.quarter": "dates.date_quarter",
-                "date_sale.month": "dates.date_month",
-                "date_sale.week": "dates.date_week",
-                
-                "customer.id": "customers.id",
-                "customer.name": "customers.name",
-                
-                "product.category_id": "products.category_id",
-                "product.category_label": "products.category_label",
-                "product.product_id": "products.product_id",
-                "product.product_label": "products.product_label",
-                
-                "country.region_id": "countries.continent_id",
-                "country.region_label": "countries.continent_label",
-                "country.country_id": "countries.country_id",
-                "country.country_label": "countries.country_label"
+                "country.region_id": "country.continent_id",
+                "country.region_label": "country.continent_label"
             }
         },
         
         {
             "name": "webvisits",
-            "label": "Website / Visits",
+            "label": "Website Visits",
             "dimensions": ["date_visit", "country", "source", "newsletter", "browser" ],
             "measures": [
 		        {"name": "pageviews", "aggregates": ["sum", "avg", "max"] }
@@ -195,30 +176,21 @@
             "joins": [
                   {
                       "master": "webvisits.date_id",
-                      "detail": "dates.id"
+                      "detail": "date.id",
+                      "alias": "date_visit"
                   },
                   {
                       "master": "webvisits.country_id",
-                      "detail": "countries.id"
+                      "detail": "country.id"
                   }
             ],            
             
             "mappings": {
-                "date_visit.year": "dates.date_year",
-                "date_visit.quarter": "dates.date_quarter",
-                "date_visit.month": "dates.date_month",
-                "date_visit.week": "dates.date_week",
-                
-                "country.region_id": "countries.continent_id",
-                "country.region_label": "countries.continent_label",
-                "country.country_id": "countries.country_id",
-                "country.country_label": "countries.country_label",
-                
-                "source.source_id": "webvisits.source_id",
-                "source.source_label": "webvisits.source_label",
-                
-                "browser.browser": "browser.browser",
-                "newsletter.newsletter": "newsletter.newsletter"
+                "country.region_id": "country.continent_id",
+                "country.region_label": "country.continent_label",
+                "source.source_id": "source_id",
+                "source.source_label": "source_label"
+                    
             }
         }
         

@@ -18,23 +18,39 @@
         {
             "name":"week",
             "label":"Week"
+        },
+        {
+            "name":"day",
+            "label":"Day"
+        },
+        {
+            "name":"dow",
+            "label":"Day of Week",
+            "key": "dow",
+            "label_attribute": "dow_label",
+            "attributes": [ { "name": "dow" },  {"name": "dow_level"} ]
         }
     ],
     "hierarchies": [
         {
+            "name": "dow",
+            "label": "Day of Week",
+            "levels": [ "dow" ]
+        },
+        {
             "name": "weekly",
             "label": "Weekly",
-            "levels": [ "week" ]
+            "levels": [ "week", "dow" ]
         },
         {
             "name": "monthly",
             "label": "Monthly",
-            "levels": [ "year", "month"]
+            "levels": [ "year", "month", "day"]
         },
         {
             "name": "yqm",
             "label": "Quarterly/Monthly",
-            "levels": [ "year", "quarter", "month"]
+            "levels": [ "year", "quarter", "month", "day"]
         }
     ],
     "default_hierarchy_name": "monthly"

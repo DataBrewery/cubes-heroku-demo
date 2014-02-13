@@ -53,6 +53,8 @@ METADATA = {
         ("day", Integer),
         ("week", Integer),
         ("weeknum", Integer),
+        ("dow", Integer),
+        ("dow_label", String)
     ],
     # Facts
     "sales": [
@@ -181,6 +183,8 @@ def insert_date(year, month, day):
         end = start + datetime.timedelta(days = 6)
 
         row["week"] = end.strftime("%Y%m%d")
+        row["dow"] = int(date.strftime("%w")) + 1
+        row["dow_label"] = date.strftime("%A")
 
     return save_object ("date", row)
 
@@ -235,7 +239,7 @@ def import_sales():
 
 def generate_webvisits():
 
-    for i in range (1, 1079):
+    for i in range (1, 2000):
 
         fact = { "id" : i }
 

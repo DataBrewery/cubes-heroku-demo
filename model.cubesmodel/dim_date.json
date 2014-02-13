@@ -29,6 +29,11 @@
         {
             "name": "monthly",
             "label": "Monthly",
+            "levels": [ "year", "month"]
+        },
+        {
+            "name": "yqm",
+            "label": "Quarterly/Monthly",
             "levels": [ "year", "quarter", "month"]
         }
     ],

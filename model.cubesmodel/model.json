@@ -1,0 +1,90 @@
+{
+    "dimensions": [
+        {
+            "name": "date_sale",
+            "label": "Sale Date",
+            "template": "date"
+        },
+        
+        {
+            "name": "date_visit",
+            "label": "View Date",
+            "template": "date"
+        },        
+        
+        {
+            "name": "customer",
+            "label": "Customer",
+            "levels": [ {
+                "name": "customer",
+                "label": "Customer",
+                "attributes": [ "id", "name" ],
+                "label_attribute": "name"
+            } ]
+        },
+        
+        {
+            "name": "product",
+            "label": "Product",
+            "levels": [
+                {
+                    "name":"category",
+                    "label":"Category",
+                    "attributes": [ "category_id", "category_label" ],
+                    "key": "category_id",
+                    "label_attribute": "category_label"
+                },
+                {
+                    "name":"product",
+                    "label":"Product",
+                    "attributes": [ "product_id", "product_label" ],
+                    "key": "product_id",
+                    "label_attribute": "product_label"
+                }
+            ]
+        },
+        
+        {
+            "name": "country",
+            "label": "Country",
+            "levels": [
+                {
+                    "name":"region",
+                    "label":"Region",
+                    "attributes": [ "region_id", "region_label" ],
+                    "key": "region_id",
+                    "label_attribute": "region_label"
+                },
+                {
+                    "name":"country",
+                    "label":"Country",
+                    "attributes": [ "country_id", "country_label" ],
+                    "key": "country_id",
+                    "label_attribute": "country_label"
+                }
+            ]
+        },
+        
+        {
+            "name": "source",
+            "label": "Source",
+            "levels": [ {
+                "name": "source",
+                "label": "Source",
+                "attributes": [ "source_id", "source_label" ],
+                "label_attribute": "source_label"
+            } ]
+        },
+        
+        {
+            "name": "browser",
+            "label": "Browser"
+        },
+        
+        {
+            "name": "newsletter",
+            "label": "Newsletter"
+        }
+
+    ]
+}

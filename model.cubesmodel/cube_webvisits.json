@@ -1,0 +1,34 @@
+
+{
+    "name": "webvisits",
+    "label": "Website Visits",
+    "info": {
+        "default_date_min": "2012-01-01",
+        "default_date_max": "2013-12-31"
+    },
+
+    "dimensions": ["date_visit", "country", "source", "newsletter", "browser" ],
+    "measures": [
+        {"name": "pageviews", "aggregates": ["sum", "avg", "max"] }
+    ],
+    
+    "joins": [
+          {
+              "master": "webvisits.date_id",
+              "detail": "date.id",
+              "alias": "date_visit"
+          },
+          {
+              "master": "webvisits.country_id",
+              "detail": "country.id"
+          }
+    ],            
+    
+    "mappings": {
+        "country.region_id": "country.continent_id",
+        "country.region_label": "country.continent_label",
+        "source.source_id": "source_id",
+        "source.source_label": "source_label"
+            
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "name": "sales",
+    "label": "Webshop Sales",
+
+    "info": {
+        "default_date_min": "2012-01-01",
+        "default_date_max": "2013-12-31"
+    },
+
+    "dimensions": [
+            "date_sale",
+            "customer",
+            "product",
+            "country"
+    ],
+
+    "measures": [
+        {"name": "quantity", "aggregates": ["sum", "avg", "max"] },
+        {"name": "price_total", "aggregates": ["sum", "avg", "max", "min"] }
+    ],
+    
+    "joins": [
+          {
+              "master": "sales.date_id",
+              "detail": "date.id",
+              "alias": "date_sale"
+          },
+          {
+              "master": "sales.customer_id",
+              "detail": "customer.id"
+          },
+          {
+              "master": "sales.product_id",
+              "detail": "product.id"
+          },
+          {
+              "master": "sales.country_id",
+              "detail": "country.id"
+          }
+    ],            
+    
+    "mappings": {
+        "country.region_id": "country.continent_id",
+        "country.region_label": "country.continent_label"
+    }
+}

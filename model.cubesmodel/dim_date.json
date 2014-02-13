@@ -1,0 +1,36 @@
+{
+    "name": "date",
+    "label": "Date",
+    "role": "time",
+    "levels": [
+        {
+            "name":"year",
+            "label":"Year"
+        },
+        {
+            "name":"quarter",
+            "label":"Quarter"
+        },
+        {
+            "name":"month",
+            "label":"Month"
+        },
+        {
+            "name":"week",
+            "label":"Week"
+        }
+    ],
+    "hierarchies": [
+        {
+            "name": "weekly",
+            "label": "Weekly",
+            "levels": [ "week" ]
+        },
+        {
+            "name": "monthly",
+            "label": "Monthly",
+            "levels": [ "year", "quarter", "month"]
+        }
+    ],
+    "default_hierarchy_name": "monthly"
+}

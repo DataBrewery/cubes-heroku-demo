@@ -133,6 +133,7 @@
         {
             "name": "sales",
             "label": "Webshop Sales",
+            "category": "Demonstration Data",
             "dimensions": ["date_sale", "customer", "product", "country" ],
             "measures": [
 		        {"name": "quantity", "aggregates": ["sum", "avg", "max"] },
@@ -168,6 +169,7 @@
         {
             "name": "webvisits",
             "label": "Website Visits",
+            "category": "Demonstration Data",
             "dimensions": ["date_visit", "country", "source", "newsletter", "browser" ],
             "measures": [
 		        {"name": "pageviews", "aggregates": ["sum", "avg", "max"] }

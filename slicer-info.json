@@ -1,7 +1,7 @@
 {
     "label": "Slicer Demo",
     "name": "slicer-demo",
-    "description": "Examle data from an imaginary web shop for demonstration purposees.",
+    "description": "Example data from an imaginary web shop for demonstration purposes.",
     "license": "CC-BY",
     "contributors": [ 
         "Ryan Berlew",

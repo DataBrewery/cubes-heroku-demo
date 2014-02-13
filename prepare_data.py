@@ -51,7 +51,7 @@ METADATA = {
         ("quarter", Integer),
         ("month", Integer),
         ("day", Integer),
-        ("week", Integer),
+        ("week", String),
         ("weeknum", Integer),
         ("dow", Integer),
         ("dow_label", String)
@@ -177,12 +177,12 @@ def insert_date(year, month, day):
         row["quarter"] = ((date.month - 1) / 3) + 1
         row["month"] = date.month
         row["day"] = date.day
-        row["weeknum"] = date.isocalendar()[1]
+        row["weeknum"] = int(date.strftime("%U"))
 
         start = date - datetime.timedelta(days = date.weekday())
         end = start + datetime.timedelta(days = 6)
 
-        row["week"] = end.strftime("%Y%m%d")
+        row["week"] = end.strftime("%Y-%m-%d")
         row["dow"] = int(date.strftime("%w")) + 1
         row["dow_label"] = date.strftime("%A")
 

@@ -28,7 +28,7 @@
             "label":"Day of Week",
             "key": "dow",
             "label_attribute": "dow_label",
-            "attributes": [ { "name": "dow" },  {"name": "dow_level"} ]
+            "attributes": [ { "name": "dow" },  {"name": "dow_label"} ]
         }
     ],
     "hierarchies": [
@@ -43,9 +43,14 @@
             "levels": [ "week", "dow" ]
         },
         {
-            "name": "monthly",
-            "label": "Monthly",
+            "name": "daily",
+            "label": "Daily",
             "levels": [ "year", "month", "day"]
+        },
+        {
+            "name": "ym",
+            "label": "Monthly",
+            "levels": [ "year", "month" ]
         },
         {
             "name": "yqm",
@@ -53,5 +58,5 @@
             "levels": [ "year", "quarter", "month", "day"]
         }
     ],
-    "default_hierarchy_name": "monthly"
+    "default_hierarchy_name": "daily"
 }

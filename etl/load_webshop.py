@@ -17,7 +17,7 @@ import csv
 import random
 
 cache = {}
-engine = create_engine("sqlite:///webshop.sqlite")
+engine = create_engine("sqlite:///data/webshop.sqlite")
 metadata = MetaData(bind=engine)
 
 METADATA = {

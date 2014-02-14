@@ -1,5 +1,5 @@
 {
-    "name": "Country",
+    "name": "country",
     "label": "Country",
     "attributes": [
         {"name": "code", "label": "Country Code"},

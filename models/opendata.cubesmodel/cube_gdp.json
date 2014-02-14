@@ -1,0 +1,23 @@
+{
+    "name": "gdp",
+    "category": "Open Data",
+    "dimensions": [ "year", "country" ],
+
+    "measures": [
+        {"name": "value", "label": "GDP in current USD"}
+    ],
+
+    "aggregates": [
+        {
+            "name": "gdp_avg",
+            "label": "Average GDP in current USD",
+            "measure": "value",
+            "function": "avg"
+        }
+    ],
+
+    "mappings": {
+        "country.name": "country_name",
+        "country.code": "country_code"
+    }
+}

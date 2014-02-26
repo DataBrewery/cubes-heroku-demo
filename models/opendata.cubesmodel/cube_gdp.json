@@ -1,6 +1,10 @@
 {
     "name": "gdp",
     "category": "Open Data",
+    "info": {
+        "min_date": "1960-01-01",
+        "max_date": "2011-12-31"
+    },
     "dimensions": [ "year", "country" ],
 
     "measures": [

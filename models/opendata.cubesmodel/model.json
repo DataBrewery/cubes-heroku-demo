@@ -1,5 +1,5 @@
 {
     "dimensions": [
-        {"name": "year", "label": "Year"}
+        {"name": "year", "label": "Year", "role": "time"}
     ]
 }

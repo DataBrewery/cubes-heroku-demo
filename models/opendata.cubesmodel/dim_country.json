@@ -1,6 +1,7 @@
 {
     "name": "country",
     "label": "Country",
+    "cardinality": "high",
     "attributes": [
         {"name": "code", "label": "Country Code"},
         {"name": "name", "label": "Country Name"}

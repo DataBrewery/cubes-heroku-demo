@@ -3,8 +3,7 @@
     "label": "Webshop Sales",
     "category": "Demonstration Data",
     "info": {
-        "min_date": "2012-01-10",
-        "max_date": "2013-12-20"
+        "min_date": "2012-01-10"
     },
 
     "dimensions": [

@@ -1,10 +1,19 @@
 {
     "name": "gdp",
+    "label": "World Gross Domestic Product 1960-2011",
     "category": "Open Data",
+    "info": {
+        "min_date": "1960-01-01",
+        "max_date": "2011-12-31"
+    },
     "dimensions": [ "year", "country" ],
 
     "measures": [
-        {"name": "value", "label": "GDP in current USD"}
+        {
+            "name": "value", 
+            "label": "GDP in current USD",
+            "info": { "measurement_type": "money" }
+        }
     ],
 
     "aggregates": [
@@ -12,7 +21,8 @@
             "name": "gdp_avg",
             "label": "Average GDP in current USD",
             "measure": "value",
-            "function": "avg"
+            "function": "avg",
+            "info": { "measurement_type": "money" }
         }
     ],
 

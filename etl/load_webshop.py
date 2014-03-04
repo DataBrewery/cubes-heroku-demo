@@ -196,7 +196,7 @@ def insert_webvisit(fact):
 
 def generate_dates():
     start_date =  datetime.datetime.strptime("2012-01-01", "%Y-%m-%d")
-    end_date =  datetime.datetime.strptime("2013-12-31", "%Y-%m-%d")
+    end_date =  datetime.datetime.strptime("2015-1-1", "%Y-%m-%d")
 
     cur_date = start_date
     while (cur_date <= end_date):

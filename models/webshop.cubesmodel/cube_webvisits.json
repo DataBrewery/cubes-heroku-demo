@@ -4,8 +4,7 @@
     "label": "Website Visits",
     "category": "Demonstration Data",
     "info": {
-        "min_date": "2012-01-01",
-        "max_date": "2013-12-31"
+        "min_date": "2012-01-01"
     },
 
     "dimensions": ["date_visit", "country", "source", "newsletter", "browser" ],

@@ -1,5 +1,10 @@
 {
     "dimensions": [
-        {"name": "year", "label": "Year", "role": "time"}
+        {"name": "year", "label": "Year", "role": "time"},
+        {"name": "projection", "label": "Projection"},
+        {"name": "commitment", "label": "Commitment"},
+        {"name": "type", "label": "Type"},
+        {"name": "country", "label": "Country"},
+        {"name": "flow", "label": "Flow"}
     ]
 }
